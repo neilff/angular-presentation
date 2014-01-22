@@ -1,0 +1,70 @@
+<div class="row" ng-init="init()">
+    <div class="col-md-12">
+        <h1>{{config.title}} <small class="pull-right"><a href="">Filter Options</a></small></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <form role="form">
+            <div class="form-group">
+                <label for="exampleSearch">Search Inventory</label>
+                <input type="text" class="form-control" id="exampleSearch" placeholder="Enter search..." ng-model="search" ng-enter="retrieveProducts();" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <form role="form">
+            <div class="form-group">
+                <label for="exampleQuery">Query Inventory</label>
+                <input type="text" class="form-control" id="exampleQuery" placeholder="Enter query..." ng-model="query" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td colspan="7">
+                        <!-- AngularUI Bootstrap Pagination -->
+                        <pagination on-select-page="selectPage(page)" items-per-page="itemsPerPage" total-items="totalItems" page="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- Example of using a directive to replace inline JS -->
+                    <th><app-header-sort order="id">ID</app-header-sort></th>
+                    <th><app-header-sort order="name">Product Name</app-header-sort></th>
+                    <th><app-header-sort order="primary_category">Category</app-header-sort></th>
+                    <th><app-header-sort order="secondary_category">Sub-Category</app-header-sort></th>
+                    <th><app-header-sort order="regular_price_in_cents">Price</app-header-sort></th>
+
+                    <!-- Example of using inline JS to accomplish same thing -->
+                    <th><a href="" ng-click="order = 'alcohol_content'; reverse = !reverse">Alcohol %</a></th>
+
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products | filter: query | orderBy:order:reverse" class="lcbo-listing">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.primary_category}}</td>
+                    <td>{{product.secondary_category}}</td>
+                    <td>{{product.regular_price_in_cents | convertToDollar}} <br />{{product.package}}</td>
+                    <td>{{product.alcohol_content | convertToPercent}}</td>
+                    <td><img ng-src="{{product.image_thumb_url}}" class="thumb" /></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        <pagination on-select-page="selectPage(page)" items-per-page="itemsPerPage" total-items="totalItems" page="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

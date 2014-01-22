@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="well well-lg">
+            <h4>Weather Widget <small class="pull-right"><a href="" ng-click="collapsed = !collapsed">Toggle Weather Response</a></small></h4>
+
+            <div collapse="collapsed">
+                <pre>
+                    <p class="lead">Weather Response</p><small>{{weather}}</small>
+                </pre>
+            </div>
+
+            <canvas chart type="Line" options="options" data="chart" height="300"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <p class="lead">7 Day Forecast for {{city}}</p>
+    </div>
+</div>

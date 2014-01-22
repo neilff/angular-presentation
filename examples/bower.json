@@ -1,0 +1,29 @@
+{
+  "name": "lcbo-angular",
+  "version": "0.0.1",
+  "authors": [
+    "Neil Fenton <neilff@gmail.com>"
+  ],
+  "description": "LCBO Api consumed in AngularJS",
+  "license": "MIT",
+  "homepage": "www.codebeard.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.7",
+    "angular-animate": "~1.2.7",
+    "angular-resource": "~1.2.7",
+    "angular-touch": "~1.2.7",
+    "angular-route": "~1.2.7",
+    "angular-bootstrap": "~0.9.0",
+    "angular-ui-utils": "~0.1.0",
+    "jquery": "~2.0.3",
+    "angles": "*",
+    "chartjs": "*"
+  }
+}
