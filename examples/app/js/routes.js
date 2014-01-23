@@ -15,6 +15,7 @@ angular.module('lcboApp').config(['$routeProvider', function($routeProvider) {
     /* Services Tab */
     $routeProvider.when('/services/api', {templateUrl: 'views/services/api.html', controller: 'ApiCtrl'});
     $routeProvider.when('/services/filters', {templateUrl: 'views/services/filters.html', controller: 'FiltersCtrl'});
+    $routeProvider.when('/services/firebase', {templateUrl: 'views/services/firebase.html', controller: 'FirebaseCtrl'});
 
     /* Help Tab */
     $routeProvider.when('/help/links', {templateUrl: 'views/help/links.html', controller: 'HelpCtrl'});

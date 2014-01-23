@@ -1,12 +1,17 @@
 <div class="row">
     <div class="col-md-6">
         <h1>{{config.title}}</h1>
-        <h4>{{name}}</h4>
 
         <form role="form">
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleSearch" placeholder="Enter name..." ng-model="name" />
+                <label for="twoWay">As we type here...</label>
+                <input type="text" class="form-control" id="twoWay" placeholder="Enter name..." ng-model="name" />
             </div>
         </form>
+
+        <b>Text should appear here:</b>
+        <h4>{{name}}</h4>
+        <h4>{{name.toUpperCase()}}</h4>
+        <h4>{{name.toLowerCase()}}</h4>
     </div>
 </div>

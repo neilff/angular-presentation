@@ -41,6 +41,10 @@ angular.module('lcboApp.controllers').
                         {
                             url: '#/services/filters',
                             title: 'Filtering Data'
+                        },
+                        {
+                            url: '#/services/firebase',
+                            title: 'Firebase'
                         }
                     ]
                 },

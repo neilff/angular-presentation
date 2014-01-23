@@ -23,7 +23,7 @@ angular.module('lcboApp.directives').
                 /* Directive Controller */
 
                 _.extend($scope, {
-                    weather: [],
+                    weather: {},
                     cityInfo: {}
                 });
 
@@ -41,6 +41,7 @@ angular.module('lcboApp.directives').
                         }
                     }).success(function(data) {
                         $scope.cityInfo = data.city;
+                        $scope.weather = data;
                         console.log(data);
 
                         _.each(data.list, function(day) {

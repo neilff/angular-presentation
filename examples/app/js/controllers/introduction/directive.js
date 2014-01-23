@@ -12,6 +12,5 @@ angular.module('lcboApp.controllers').
         }
 
         $scope.init = function() {
-            $scope.name = 'Enter your name above!'
         }
     }]);

@@ -17,6 +17,13 @@
 
 <div class="row">
     <div class="col-md-12">
+        <p class="lead">Filtering Data</p>
+        <input type="checkbox" ng-true-value="true" ng-false-value="" ng-model="query.isActive" /> Is Active?
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -28,7 +35,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="item in dataset | filter:search">
+                <tr ng-repeat="item in filtered = (dataset | filter: query | filter: search)">
                     <th>{{item.id}}</th>
                     <th>{{item.name}}</th>
                     <th>{{item.age}}</th>

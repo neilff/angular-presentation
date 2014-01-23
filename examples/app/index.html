@@ -16,16 +16,22 @@
     <!-- External Libraries -->
     <script type="text/javascript" src="lib/jquery/jquery.js"></script>
     <script type="text/javascript" src="lib/chartjs/Chart.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
 </head>
 <body>
 
+    <!-- ngController: This is now using the MenuCtrl, see js/controllers/menu.js -->
     <div ng-controller="MenuCtrl">
         <div ng-include="menuTemplate"></div>
     </div>
 
+    <!-- ngView Tag: Views are injected here -->
     <div class="container view-container">
         <div ng-view class="view-frame"></div>
-        <div>AngularJS Examples: v<span app-version></span></div>
     </div>
+
 </body>
 </html>

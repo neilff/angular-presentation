@@ -16,6 +16,7 @@ require('./controllers/introduction/databind');
 require('./controllers/introduction/directive');
 
 require('./controllers/services/api');
+require('./controllers/services/firebase');
 require('./controllers/services/filters');
 
 require('./controllers/help/links');

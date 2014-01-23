@@ -1,0 +1,33 @@
+<h1>Angular Fire by Firebase</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td colspan="3">
+                        <div class="form-group">
+                            <label for="name">Todo</label>
+                            <input type="text" class="form-control" id="name" ng-model="note" />
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" ng-click="addTodo();">Create Todo</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in todo" class="lcbo-listing">
+                    <td>{{item.date | moment: 'M/D/YYYY @ h:m A'}}</td>
+                    <td>{{item.note}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="well">{{todo}}</p>
+    </div>
+</div>

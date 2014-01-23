@@ -4,21 +4,32 @@
  * Socket IO Directive
  */
 
-var io = require('socket.io-client');
+var io = require('socket.io-client'),
+    _ = require('underscore');
 
 angular.module('lcboApp.directives').
     directive('appSocket', [function() {
         return {
             restrict: 'E', // E = Element, A = Attribute
-            template: '<span class="badge">{{user_count}} Users Connected</span>',
+            template: '<span class="badge {{color}}">{{user_count}} Users Connected</span>',
             controller: ['socketFactory', '$scope', function(socketFactory, $scope) {
                 var socket = io.connect();
 
-                $scope.user_count = 0;
+                _.extend($scope, {
+                    user_count: 0,
+                    color: ''
+                });
 
+                /* When Socket.io emits 'usercount', perform action */
                 socket.on('usercount', function (data) {
-                    console.log(data);
+                    console.log(data.data);
                     $scope.$apply(function() {
+                        if (data.data > 1) {
+                            $scope.color = 'bg-blue';
+                        } else {
+                            $scope.color = '';
+                        }
+
                         $scope.user_count = data.data;
                     });
                 });

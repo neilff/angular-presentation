@@ -8,6 +8,7 @@ angular.module('lcboApp', [
     'ngRoute',
     'ngAnimate',
     'btford.socket-io',
+    'firebase',
     'ui.bootstrap',
     'ui.utils',
     'angles',

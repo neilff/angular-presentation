@@ -1,6 +1,22 @@
+<!-- ng-init -->
 <div class="row" ng-init="init()">
     <div class="col-md-12">
-        <h1>{{config.title}}</h1>
-        <p>This is an example of a view.</p>
+
+        <!-- $scope binding -->
+        <h1>{{config.title}} <small>{{config.subtitle}}</small></h1>
+
+        <!-- ng-repeat -->
+        <ul>
+            <li ng-repeat="fruit in fruits">{{fruit}}</li>
+        </ul>
+
+        <!-- ng-click -->
+        <button class="btn btn-primary" ng-click="toggle()">Show Paragraph ({{count}})</button>
+
+        <!-- ng-show / hide -->
+        <span class="lead" ng-show="show">I have display: none applied</span>
+
+        <!-- ng-if -->
+        <p class="lead" ng-if="show">I am removed from the DOM</p>
     </div>
 </div>
