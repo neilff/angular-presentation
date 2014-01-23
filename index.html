@@ -40,7 +40,7 @@
 				<section data-markdown>
 				    <script type="text/template">
 				        ## Intermediate AngularJS
-				        #### A re-introduction to the JavaScript Framework
+				        #### By Neil Fenton
 				    </script>
 				</section>
 
@@ -48,10 +48,23 @@
 				    <script type="text/template">
 				        ## Overview
 				        1. Advantages / Disadvantages of AngularJS
-				        2. Getting Started
-				        3. Tips and Tricks
-				        4. Code Examples
+				        2. Killer Features
+				        2. Code Examples
+				        	- Directives
+				        	- Consuming an API
+				        	- Hybrid realtime example
 				    </script>
+				</section>
+
+				<section>
+					<h2>What is AngularJS?</h2>
+
+					<ul>
+						<li>Open source JavaScript MVC Framework</li>
+						<li>Single Page Applications</li>
+						<li>Launched in 2009</li>
+						<li>Latest release is 1.2.9 (Jan 15, 2014)</li>
+					</ul>
 				</section>
 
 				<section>
@@ -67,7 +80,6 @@
 		        			<ul>
 		        				<li>Creator of the popular www.google.com website</li>
 		        			</ul>
-	        			<li>Popularity</li>
 			        </ul>
 				</section>
 
@@ -80,32 +92,103 @@
 				</section>
 
 				<section>
-			        <h2>Advantages of AngularJS</h2>
-			        <h4>Killer Features</h4>
+					<h2>Disadvantages of AngularJS</h2>
+
+					<ul>
+						<li>Made by Google</li>
+							<ul>
+								<li>Destroyer of the popular Google Reader software</li>
+							</ul>
+						<li>Very opionionated</li>
+						<li>Deep learning curve</li>
+						<li>Poor documentation (improving)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Disadvantages of AngularJS</h2>
+					<h4>Average Learning Curve of Angular</h4>
+
+					<img src="img/feelings_about_angularjs_over_time.png" alt="">
+					<small><a href="http://www.bennadel.com/blog/2439-My-Experience-With-AngularJS-The-Super-heroic-JavaScript-MVW-Framework.htm">My Experience With AngularJS - The Super-heroic JavaScript MVW Framework</a></small>
+				</section>
+
+				<section>
+			        <h2>Killer Features</h2>
 
 			        <ul>
 			        	<li>Two Way Data binding</li>
-			        	<li>Directives</li>
 			        	<li>Dependency Injection</li>
+			        	<li>Directives</li>
 			        </ul>
 				</section>
 
 				<section>
-					<h2>Advantages of AngularJS</h2>
+					<h2>Killer Features</h2>
 					<h4>Two Way Data Binding</h4>
 
-					<p>Tradtionally when the model changes, the developer is responsible for updating DOM elements to reflect these changes.</p>
-
-					<p>This is also a two way street, when the DOM is changed, we need to update the model to reflect the changes.</p>
-
-					<p>AngularJS handles synchronization between the DOM and model and vice versa.</p>
+					<ul>
+						<li>Tradtionally when the model changes, the developer is responsible for updating DOM.</li>
+						<li>And when the DOM is changed, we need to update the model to reflect the changes.</li>
+						<li>AngularJS handles synchronization between the DOM and model automatically.</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Advantages of AngularJS</h2>
-					<h4>Directives</h4>
+					<h2>Killer Features</h2>
+					<h4>Dependency Injection</h4>
+
+					<ul>
+						<li>DI is used to control dependencies within AngularJS</li>
+						<li>Used primarily in controllers</li>
+						<li>We inject the services we require into our controllers</li>
+					</ul>
 				</section>
 
+				<section>
+					<h2>Killer Features</h2>
+					<h4>Directives</h4>
+					<ul>
+						<li>A function which executes when AngularJS discovers them in the DOM.</li>
+						<li>Can perform pretty much anything.</li>
+						<li>ng-repeat is an example of an AngularJS directive.</li>
+						<li>Named with a custom prefix (app-, myapp-, etc.)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Killer Features</h2>
+					<h4>Directives Cont.</h4>
+
+					<ul>
+						<li>The most powerful feature of Directives is extending HTML.</li>
+						<li>Act as reusable components</li>
+						<li>Use case example: Search box</li>
+						<li>If you think of HTML, we have tags such as <pre>tr, table, br, img, a</pre> How would you describe what these do? That's what a directive is.</li>
+					</ul>
+
+					<small>* Ideas from <a href="http://stackoverflow.com/questions/13875466/what-is-an-angularjs-directive">StackOverflow: What is an AngularJS Directive?</a></small>
+				</section>
+
+				<section>
+					<h2>Getting Started</h2>
+					<h4>Notable Angular Directives</h4>
+
+					<ul>
+						<li><b>ng-app</b>: Declares the root element of the application</li>
+						<li><b>ng-model</b>: Allows two way data binding between view and scope</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Code Examples</h2>
+
+					<ul>
+						<li>Directives</li>
+						<li>Consuming an API</li>
+						<li>Hybrid Realtime</li>
+					</ul>
+				</section>
 			</div>
 
 		</div>
