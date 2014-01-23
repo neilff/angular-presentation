@@ -24,6 +24,8 @@
     "angular-ui-utils": "~0.1.0",
     "jquery": "~2.0.3",
     "angles": "*",
-    "chartjs": "*"
+    "chartjs": "*",
+    "angular-socket-io": "~0.3.0",
+    "socket.io-client": "~0.9.16"
   }
 }

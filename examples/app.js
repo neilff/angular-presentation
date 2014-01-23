@@ -7,9 +7,9 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     request = require('request'),
-    config = require('./config/config');
-
-var app = express();
+    config = require('./config/config'),
+    app = express(),
+    server = http.createServer(app);
 
 /* Express Configuration */
 app.set('port', process.env.PORT || 3000);
@@ -35,7 +35,31 @@ app.use('/api', function(req, res) {
 /* Init Routing */
 require('./config/routes')(app);
 
-/* Start Server */
-http.createServer(app).listen(app.get('port'), function(){
-    console.log('Express server listening on port ' + app.get('port'));
+// /* Start Server */
+// http.createServer(app).listen(app.get('port'), function(){
+//     console.log('Express server listening on port ' + app.get('port'));
+// });
+
+var io = require('socket.io').listen(server);
+
+/**
+ * Socket.IO Init
+ */
+
+var clientCounter = 0;
+
+io.sockets.on('connection', function(socket) {
+    clientCounter++;
+    io.sockets.emit('usercount', { data: clientCounter });
+
+    socket.on('disconnect', function() {
+        clientCounter--;
+        io.sockets.emit('usercount', { data: clientCounter });
+    });
 });
+
+/**
+ * Init Server
+ */
+
+server.listen(3000);

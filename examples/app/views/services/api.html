@@ -1,6 +1,6 @@
 <div class="row" ng-init="init()">
     <div class="col-md-12">
-        <h1>{{config.title}} <small class="pull-right"><a href="">Filter Options</a></small></h1>
+        <h1>{{config.title}}</h1>
     </div>
 </div>
 
@@ -10,6 +10,10 @@
             <div class="form-group">
                 <label for="exampleSearch">Search Inventory</label>
                 <input type="text" class="form-control" id="exampleSearch" placeholder="Enter search..." ng-model="search" ng-enter="retrieveProducts();" />
+            </div>
+            <div class="form-group">
+                <label for="exampleSearchLive">Keydown Live Search</label>
+                <input type="text" class="form-control" id="exampleSearchLive" placeholder="Enter search..." ng-model="search" ng-keydown="retrieveProducts();" />
             </div>
         </form>
     </div>

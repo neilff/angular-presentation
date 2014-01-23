@@ -13,3 +13,4 @@ require('../lib/angular-touch/angular-touch');
 require('../lib/angular-bootstrap/ui-bootstrap-tpls');
 require('../lib/angular-ui-utils/ui-utils');
 require('../lib/angles/libs/angles');
+require('../lib/angular-socket-io/socket');

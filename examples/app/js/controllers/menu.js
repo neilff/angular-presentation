@@ -28,10 +28,6 @@ angular.module('lcboApp.controllers').
                         {
                             url: '#/introduction/directive-int',
                             title: 'Directives: Intermediate'
-                        },
-                        {
-                            url: '#/introduction/directive-adv',
-                            title: 'Directives: Advanced'
                         }
                     ]
                 },
@@ -41,6 +37,31 @@ angular.module('lcboApp.controllers').
                         {
                             url: '#/services/api',
                             title: '$http'
+                        },
+                        {
+                            url: '#/services/filters',
+                            title: 'Filtering Data'
+                        }
+                    ]
+                },
+                {
+                    title: 'Help',
+                    links: [
+                        {
+                            url: '#/help/links',
+                            title: 'Links'
+                        },
+                        {
+                            url: 'http://docs.angularjs.org/guide/',
+                            title: 'Documentation'
+                        },
+                        {
+                            url: 'http://www.thinkster.io/',
+                            title: 'Thinkster.io'
+                        },
+                        {
+                            url: 'https://egghead.io/',
+                            title: 'Egghead.io'
                         }
                     ]
                 }

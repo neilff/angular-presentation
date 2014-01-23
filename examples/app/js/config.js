@@ -7,6 +7,7 @@
 angular.module('lcboApp', [
     'ngRoute',
     'ngAnimate',
+    'btford.socket-io',
     'ui.bootstrap',
     'ui.utils',
     'angles',

@@ -1,0 +1,28 @@
+<div class="row" ng-init="init()">
+    <div class="col-md-6">
+        <h1>{{config.title}}</h1>
+        <h4>{{name}}</h4>
+
+        <form role="form">
+            <div class="form-group">
+                <label for="linkQuery"></label>
+                <input type="text" class="form-control" id="linkQuery" placeholder="Query links..." ng-model="query" />
+            </div>
+        </form>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="link in links | orderBy:title | filter:query">
+                    <td>{{link.title}}</td>
+                    <td><a href="{{link.url}}">{{link.url}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
